@@ -16,7 +16,6 @@ struct CreateSongs: AsyncMigration {
             .create()
     }
 
-
     func revert(on database: Database) async throws {
         try await database.schema("songs").delete()
     }
